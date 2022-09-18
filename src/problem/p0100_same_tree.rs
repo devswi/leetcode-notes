@@ -14,6 +14,7 @@ impl Solution {
         p: Option<Rc<RefCell<TreeNode>>>,
         q: Option<Rc<RefCell<TreeNode>>>,
     ) -> bool {
+        // p == q ✅
         match (p, q) {
             (None, None) => true,
             (Some(p_node), Some(q_node)) => {

@@ -35,7 +35,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_0104() {
+    fn test_0108() {
         assert_eq!(
             Solution::sorted_array_to_bst(vec![-10, -3, 0, 5, 9]),
             tree![0, -3, 9, -10, null, 5]

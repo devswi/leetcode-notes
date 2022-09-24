@@ -13,4 +13,5 @@ mod p0257_binary_tree_paths;
 mod p0404_sum_of_left_leaves;
 mod p0501_find_mode_in_binary_search_tree;
 mod p0530_minimum_absolute_difference_in_bst;
+mod p0543_diameter_of_binary_tree;
 mod p0700_search_in_a_binary_search_tree;

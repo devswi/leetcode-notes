@@ -21,6 +21,7 @@ impl Solution {
         if postorder.is_empty() {
             return None;
         }
+        // 后续遍历结果的最后一个元素为根节点
         let root_idx = inorder
             .iter()
             .position(|v| v == postorder.last().unwrap())

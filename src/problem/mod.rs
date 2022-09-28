@@ -8,6 +8,7 @@ mod p0108_convert_sorted_array_to_binary_search_tree;
 mod p0110_balanced_binary_tree;
 mod p0111_minimum_depth_of_binary_tree;
 mod p0112_path_sum;
+mod p0113_path_sum_2;
 mod p0144_binary_tree_preorder_traversal;
 mod p0145_binary_tree_postorder_traversal;
 mod p0199_binary_tree_right_side_view;

@@ -21,6 +21,7 @@ mod p0404_sum_of_left_leaves;
 mod p0501_find_mode_in_binary_search_tree;
 mod p0513_find_bottom_left_tree_value;
 mod p0530_minimum_absolute_difference_in_bst;
+mod p0538_convert_bst_to_greater_tree;
 mod p0543_diameter_of_binary_tree;
 mod p0563_binary_tree_tile;
 mod p0637_average_of_levels_in_binary_tree;

@@ -1,3 +1,4 @@
+mod p0002_add_two_numbers;
 mod p0094_binary_tree_inorder_traversal;
 mod p0100_same_tree;
 mod p0101_symmetric_tree;

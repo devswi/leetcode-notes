@@ -30,3 +30,4 @@ mod p0543_diameter_of_binary_tree;
 mod p0563_binary_tree_tile;
 mod p0637_average_of_levels_in_binary_tree;
 mod p0700_search_in_a_binary_search_tree;
+mod p1784_check_if_binary_string_has_at_most_one_segment_of_ones;

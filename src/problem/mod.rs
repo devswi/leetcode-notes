@@ -1,4 +1,5 @@
 mod p0002_add_two_numbers;
+mod p0020_valid_parentheses;
 mod p0082_remvoe_duplicates_from_sorted_list_ii;
 mod p0094_binary_tree_inorder_traversal;
 mod p0100_same_tree;

@@ -34,6 +34,7 @@ mod p0637_average_of_levels_in_binary_tree;
 mod p0700_search_in_a_binary_search_tree;
 mod p0777_swap_adjacent_in_lr_string;
 mod p0811_subdomain_visit_count;
+mod p0856_score_of_parentheses;
 mod p0870_advantage_shuffle;
 mod p0921_minimum_add_to_make_parentheses_valid;
 mod p0927_three_equals_parts;

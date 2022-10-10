@@ -16,7 +16,6 @@ impl Solution {
         // dp[i][1] 交换
         dp[0][0] = 0;
         dp[0][1] = 1;
-        println!("{:?}", dp);
         for i in 1..len {
             if nums1[i] > nums1[i - 1] && nums2[i] > nums2[i - 1] {
                 // 顺序满足条件 则

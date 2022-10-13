@@ -41,6 +41,7 @@ mod p0856_score_of_parentheses;
 mod p0870_advantage_shuffle;
 mod p0921_minimum_add_to_make_parentheses_valid;
 mod p0927_three_equals_parts;
+mod p0940_distinct_subsequences_ii;
 mod p1694_reformat_phone_number;
 mod p1784_check_if_binary_string_has_at_most_one_segment_of_ones;
 mod p1790_check_if_one_string_swap_can_make_strings_equal;

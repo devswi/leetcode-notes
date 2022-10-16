@@ -44,6 +44,7 @@ mod p0921_minimum_add_to_make_parentheses_valid;
 mod p0927_three_equals_parts;
 mod p0940_distinct_subsequences_ii;
 mod p1441_build_an_array_with_stack_operations;
+mod p1480_running_sum_of_1d_array;
 mod p1694_reformat_phone_number;
 mod p1784_check_if_binary_string_has_at_most_one_segment_of_ones;
 mod p1790_check_if_one_string_swap_can_make_strings_equal;

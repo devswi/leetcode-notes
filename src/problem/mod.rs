@@ -41,6 +41,7 @@ mod p0817_linked_list_components;
 mod p0856_score_of_parentheses;
 mod p0870_advantage_shuffle;
 mod p0886_possible_bipartition;
+mod p0904_fruit_into_baskets;
 mod p0921_minimum_add_to_make_parentheses_valid;
 mod p0927_three_equals_parts;
 mod p0940_distinct_subsequences_ii;

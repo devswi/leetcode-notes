@@ -22,6 +22,7 @@ mod p0205_isomorphic_strings;
 mod p0222_count_complete_tree_nodes;
 mod p0226_invert_binary_tree;
 mod p0257_binary_tree_paths;
+mod p0392_is_subsequence;
 mod p0404_sum_of_left_leaves;
 mod p0455_assign_cookies;
 mod p0501_find_mode_in_binary_search_tree;

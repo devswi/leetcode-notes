@@ -1,4 +1,4 @@
-// 0021. Reverse Linked List
+// 0021. Merge Two Sorted Lists
 // https://leetcode.cn/problems/merge-two-sorted-lists/
 
 #[allow(dead_code)]
@@ -12,7 +12,22 @@ impl Solution {
         list1: Option<Box<ListNode>>,
         list2: Option<Box<ListNode>>,
     ) -> Option<Box<ListNode>> {
-        unimplemented!();
+        let mut list1 = list1;
+        let mut list2 = list2;
+        let mut dummy = ListNode::new(0);
+        let mut p = &mut dummy;
+        while let (Some(l1), Some(l2)) = (list1.as_ref(), list2.as_ref()) {
+            let l = if l1.val < l2.val {
+                &mut list1
+            } else {
+                &mut list2
+            };
+            p.next = l.take();
+            p = p.next.as_mut().unwrap();
+            *l = p.next.take();
+        }
+        p.next = list1.or(list2);
+        dummy.next
     }
 }
 

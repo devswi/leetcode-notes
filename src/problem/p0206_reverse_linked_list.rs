@@ -9,7 +9,14 @@ use crate::data_structure::linked_list::ListNode;
 #[allow(dead_code)]
 impl Solution {
     pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        unimplemented!();
+        let mut head = head;
+        let mut dummy = ListNode::new(0);
+        while let Some(mut node) = head {
+            head = node.next.take();
+            node.next = dummy.next;
+            dummy.next = Some(node);
+        }
+        dummy.next
     }
 }
 

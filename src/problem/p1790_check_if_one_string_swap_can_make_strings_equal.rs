@@ -16,7 +16,6 @@ impl Solution {
                 diff.push(idx);
             }
         }
-        println!("{:?}", diff);
         if diff.is_empty() {
             return true;
         }

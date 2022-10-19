@@ -44,6 +44,7 @@ mod p0811_subdomain_visit_count;
 mod p0817_linked_list_components;
 mod p0856_score_of_parentheses;
 mod p0870_advantage_shuffle;
+mod p0876_middle_of_the_linked_list;
 mod p0886_possible_bipartition;
 mod p0902_numbers_at_most_n_given_digit_set;
 mod p0904_fruit_into_baskets;

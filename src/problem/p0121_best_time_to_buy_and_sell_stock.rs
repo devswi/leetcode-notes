@@ -6,8 +6,20 @@ pub struct Solution {}
 
 #[allow(dead_code)]
 impl Solution {
-    pub fn max_profit(_prices: Vec<i32>) -> i32 {
-        unimplemented!();
+    pub fn max_profit(prices: Vec<i32>) -> i32 {
+        let mut profit = 0;
+        let mut min = i32::MAX;
+        // 遍历数组
+        for p in prices {
+            if p < min {
+                // 发现更低的价格，买
+                min = p;
+            } else if p - min > profit {
+                // 当前收益大于过往收益
+                profit = p - min;
+            }
+        }
+        profit
     }
 }
 

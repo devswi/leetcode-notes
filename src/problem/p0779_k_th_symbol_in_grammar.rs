@@ -7,31 +7,43 @@ pub struct Solution {}
 #[allow(dead_code)]
 impl Solution {
     pub fn kth_grammar(n: i32, k: i32) -> i32 {
-        // 思路二叉树的层序遍历
-        use std::collections::VecDeque;
-        // 逐层模拟
-        let mut queue: VecDeque<i32> = VecDeque::new();
-        queue.push_back(0);
-        // 当前层
-        let mut row = 1;
-        // 上一层剩余数量
-        let mut cur = queue.len();
-        while cur > 0 && row < n {
-            let res = queue.pop_front().unwrap();
-            if res == 0 {
-                queue.push_back(0);
-                queue.push_back(1);
-            } else {
-                queue.push_back(1);
-                queue.push_back(0);
-            }
-            cur -= 1;
-            if cur == 0 {
-                row += 1;
-                cur = queue.len();
+        let mut k = k;
+        // n 层有 2 ^ (n - 1) 个节点
+        let mut count = 1 << (n - 1);
+        let mut cur = 0;
+        while count > 1 {
+            count >>= 1;
+            if k > count {
+                k -= count;
+                cur ^= 1;
             }
         }
-        queue[k as usize - 1]
+        cur
+        // 思路二叉树的层序遍历 timeout
+        // use std::collections::VecDeque;
+        // // 逐层模拟
+        // let mut queue: VecDeque<i32> = VecDeque::new();
+        // queue.push_back(0);
+        // // 当前层
+        // let mut row = 1;
+        // // 上一层剩余数量
+        // let mut cur = queue.len();
+        // while cur > 0 && row < n {
+        //     let res = queue.pop_front().unwrap();
+        //     if res == 0 {
+        //         queue.push_back(0);
+        //         queue.push_back(1);
+        //     } else {
+        //         queue.push_back(1);
+        //         queue.push_back(0);
+        //     }
+        //     cur -= 1;
+        //     if cur == 0 {
+        //         row += 1;
+        //         cur = queue.len();
+        //     }
+        // }
+        // queue[k as usize - 1]
     }
 }
 

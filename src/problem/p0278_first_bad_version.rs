@@ -16,7 +16,7 @@ impl Solution {
         let (mut left, mut right) = (1, n);
         while left < right {
             let mid = left + (right - left) / 2;
-            if self.isBadVersion(mid) {
+            if self.is_bad_version(mid) {
                 right = mid; // 答案在 [left, mid] 中
             } else {
                 left = mid + 1; // 答案在 [mid + 1, left] 中
@@ -25,7 +25,7 @@ impl Solution {
         left
     }
 
-    fn isBadVersion(&self, version: i32) -> bool {
+    fn is_bad_version(&self, version: i32) -> bool {
         version >= self.bad_version
     }
 }

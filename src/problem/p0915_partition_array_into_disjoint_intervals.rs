@@ -16,14 +16,14 @@ impl Solution {
         let mut max_pos = nums[0];
         // 0~i 中的最大值
         let mut max_i = nums[0];
-        for num in nums[1..].iter() {
-            max_i = max(max_i, *num);
-            if max_i <= max_pos {
-                pos += 1;
-                max_pos = max(*num, max_pos);
+        (1..nums.len()).for_each(|i| {
+            max_i = max(max_i, nums[i]);
+            if max_pos > nums[i] {
+                max_pos = max_i;
+                pos = i;
             }
-        }
-        pos + 1
+        });
+        (pos + 1) as i32
     }
 }
 
@@ -36,5 +36,6 @@ mod tests {
     fn test_0915() {
         assert_eq!(Solution::partition_disjoint(vec![5, 0, 3, 8, 6]), 3);
         assert_eq!(Solution::partition_disjoint(vec![1, 1, 1, 0, 6, 12]), 4);
+        assert_eq!(Solution::partition_disjoint(vec![1, 1]), 1);
     }
 }

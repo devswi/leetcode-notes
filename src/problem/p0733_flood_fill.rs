@@ -6,8 +6,33 @@ pub struct Solution {}
 
 #[allow(dead_code)]
 impl Solution {
-    pub fn flood_fill(_images: Vec<Vec<i32>>, _sr: i32, _sc: i32, _color: i32) -> Vec<Vec<i32>> {
-        unimplemented!();
+    pub fn flood_fill(images: Vec<Vec<i32>>, sr: i32, sc: i32, color: i32) -> Vec<Vec<i32>> {
+        let mut images = images;
+        let sr = sr as usize;
+        let sc = sc as usize;
+        let origin_color = images[sr][sc];
+        if images[sr][sc] != color {
+            Solution::helper(&mut images, sr, sc, color, origin_color);
+        }
+        images
+    }
+
+    fn helper(images: &mut Vec<Vec<i32>>, x: usize, y: usize, color: i32, origin_color: i32) {
+        if images[x][y] == origin_color {
+            images[x][y] = color;
+            if x > 0 {
+                Solution::helper(images, x - 1, y, color, origin_color);
+            }
+            if x < images.len() - 1 {
+                Solution::helper(images, x + 1, y, color, origin_color);
+            }
+            if y > 0 {
+                Solution::helper(images, x, y - 1, color, origin_color);
+            }
+            if y < images[0].len() - 1 {
+                Solution::helper(images, x, y + 1, color, origin_color);
+            }
+        }
     }
 }
 

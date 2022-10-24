@@ -33,6 +33,7 @@ mod p0392_is_subsequence;
 mod p0404_sum_of_left_leaves;
 mod p0409_longest_palindrome;
 mod p0455_assign_cookies;
+mod p0463_island_perimeter;
 mod p0501_find_mode_in_binary_search_tree;
 mod p0513_find_bottom_left_tree_value;
 mod p0515_find_largest_value_in_each_tree_row;

@@ -4,10 +4,48 @@
 #[allow(dead_code)]
 pub struct Solution {}
 
+use std::collections::VecDeque;
+
 #[allow(dead_code)]
 impl Solution {
-    pub fn shortest_subarray(_nums: Vec<i32>, _k: i32) -> i32 {
-        unimplemented!()
+    pub fn shortest_subarray(nums: Vec<i32>, k: i32) -> i32 {
+        let n = nums.len();
+        // 前缀和
+        let mut pre_sum = vec![0; n + 1];
+
+        for i in 0..n {
+            pre_sum[i + 1] = pre_sum[i] + nums[i] as i64;
+        }
+
+        let mut ans = n + 1;
+        let mut queue = VecDeque::new();
+
+        for i in 0..=n {
+            while let Some(&j) = queue.back() {
+                if pre_sum[i] <= pre_sum[j] {
+                    queue.pop_back();
+                } else {
+                    break;
+                }
+            }
+
+            while let Some(&j) = queue.front() {
+                if pre_sum[i] >= pre_sum[j] + k as i64 {
+                    ans = ans.min(i - j);
+                    queue.pop_front();
+                } else {
+                    break;
+                }
+            }
+
+            queue.push_back(i)
+        }
+
+        if ans == n + 1 {
+            -1
+        } else {
+            ans as i32
+        }
     }
 }
 

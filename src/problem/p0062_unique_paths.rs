@@ -6,8 +6,25 @@ pub struct Solution {}
 
 #[allow(dead_code)]
 impl Solution {
-    pub fn unique_paths(_m: i32, _n: i32) -> i32 {
-        unimplemented!()
+    pub fn unique_paths(m: i32, n: i32) -> i32 {
+        let m = m as usize;
+        let n = n as usize;
+        let mut dp = vec![vec![0; n]; m];
+
+        (0..m).for_each(|i| {
+            dp[i][0] = 1;
+        });
+        (0..n).for_each(|j| {
+            dp[0][j] = 1;
+        });
+
+        for i in 1..m {
+            for j in 1..n {
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+            }
+        }
+
+        dp[m - 1][n - 1]
     }
 }
 

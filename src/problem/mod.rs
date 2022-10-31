@@ -41,6 +41,7 @@ mod p0424_longest_repeating_character_replacement;
 mod p0438_find_all_anagrams_in_a_string;
 mod p0455_assign_cookies;
 mod p0463_island_perimeter;
+mod p0481_magical_string;
 mod p0501_find_mode_in_binary_search_tree;
 mod p0509_fibonacci_number;
 mod p0513_find_bottom_left_tree_value;

@@ -83,6 +83,7 @@ mod p1064_last_stone_weight;
 mod p1235_maximum_profit_in_job_scheduling;
 mod p1441_build_an_array_with_stack_operations;
 mod p1480_running_sum_of_1d_array;
+mod p1620_coordinate_with_maximum_network_quality;
 mod p1662_check_if_two_string_array_are_equivalent;
 mod p1694_reformat_phone_number;
 mod p1700_number_of_students_unable_to_eat_lunch;

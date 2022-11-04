@@ -7,26 +7,17 @@ pub struct Solution {}
 #[allow(dead_code)]
 impl Solution {
     pub fn reach_number(target: i32) -> i32 {
-        use std::collections::VecDeque;
-        let target = target.abs();
-        let mut res = 1;
-        let mut queue = VecDeque::new();
-        queue.push_back(0);
-        let mut len = queue.len();
-        while !queue.is_empty() {
-            if let Some(num) = queue.pop_front() {
-                len -= 1;
-                if num + res == target {
-                    return res;
-                }
-                queue.push_back(num + res);
-            }
-            if len == 0 {
-                len = queue.len();
-                res += 1;
-            }
+        let mut target = target.abs();
+        let mut res = 0;
+        while target > 0 {
+            res += 1;
+            target -= res;
         }
-        res
+        if target % 2 == 0 {
+            res
+        } else {
+            res + 1 + res % 2
+        }
     }
 }
 

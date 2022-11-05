@@ -81,6 +81,7 @@ mod p0927_three_equals_parts;
 mod p0934_shortest_bridge;
 mod p0940_distinct_subsequences_ii;
 mod p1064_last_stone_weight;
+mod p1106_parsing_a_boolean_expression;
 mod p1235_maximum_profit_in_job_scheduling;
 mod p1441_build_an_array_with_stack_operations;
 mod p1480_running_sum_of_1d_array;

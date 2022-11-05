@@ -14,7 +14,7 @@ impl Solution {
                 ')' => {
                     let mut count_t = 0;
                     let mut count_f = 0;
-                    while stack[stack.len() - 1] != '(' {
+                    while stack.last() != Some(&'(') {
                         if let Some(k) = stack.pop() {
                             if k == 't' {
                                 count_t += 1;

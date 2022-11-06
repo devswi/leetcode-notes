@@ -88,6 +88,7 @@ mod p1480_running_sum_of_1d_array;
 mod p1620_coordinate_with_maximum_network_quality;
 mod p1662_check_if_two_string_array_are_equivalent;
 mod p1668_maximum_repeating_substring;
+mod p1678_goal_parser_interpretation;
 mod p1694_reformat_phone_number;
 mod p1700_number_of_students_unable_to_eat_lunch;
 mod p1768_merge_string_alternately;

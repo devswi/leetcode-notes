@@ -7,25 +7,22 @@ pub struct Solution {}
 #[allow(dead_code)]
 impl Solution {
     pub fn interpret(command: String) -> String {
-        let mut stack = vec![];
-        for c in command.chars() {
-            match c {
-                ')' => {
-                    if stack.last() == Some(&'(') {
-                        stack.pop();
-                        stack.push('o');
-                    } else {
-                        stack.pop(); // l
-                        stack.pop(); // a
-                        stack.pop(); // (
-                        stack.push('a');
-                        stack.push('l')
-                    }
-                }
-                _ => stack.push(c),
+        let mut res = "".to_string();
+        let command = command.as_str();
+        let mut i = 0;
+        while i < command.len() {
+            if command[i..i + 1] == *"G" {
+                res.push('G');
+                i += 1;
+            } else if command[i..=i + 1] == *"()" {
+                res.push('o');
+                i += 2
+            } else if command[i..=i + 3] == *"(al)" {
+                res.push_str("al");
+                i += 4;
             }
         }
-        stack.into_iter().collect()
+        res
     }
 }
 

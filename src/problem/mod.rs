@@ -64,6 +64,7 @@ mod p0779_k_th_symbol_in_grammar;
 mod p0784_letter_case_permutation;
 mod p0801_minimum_swaps_to_make_sequences_increasing;
 mod p0811_subdomain_visit_count;
+mod p0816_ambiguous_coordinates;
 mod p0817_linked_list_components;
 mod p0844_backspace_string_compare;
 mod p0856_score_of_parentheses;

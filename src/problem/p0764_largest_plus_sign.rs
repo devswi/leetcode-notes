@@ -1,8 +1,6 @@
 // 0764. Largest Plus Sign
 // https://leetcode.cn/problems/largest-plus-sign/
 
-use std::iter::zip;
-
 #[allow(dead_code)]
 pub struct Solution {}
 
@@ -16,7 +14,7 @@ impl Solution {
         }
         for i in 0..n {
             let (mut top, mut right, mut bottom, mut left) = (0, 0, 0, 0);
-            for (j, k) in zip(0..n, (0..n).rev()) {
+            for (j, k) in (0..n).zip((0..n).rev()) {
                 top = if dp[j][i] == 0 { 0 } else { top + 1 };
                 right = if dp[i][k] == 0 { 0 } else { right + 1 };
                 bottom = if dp[k][i] == 0 { 0 } else { bottom + 1 };
@@ -28,7 +26,11 @@ impl Solution {
             }
         }
         let mut ans = 0;
-        zip(0..n, 0..n).for_each(|(i, j)| ans = ans.max(dp[i][j]));
+        for i in dp {
+            for j in i {
+                ans = ans.max(j);
+            }
+        }
         ans
     }
 }
@@ -42,5 +44,9 @@ mod tests {
     fn test_0764() {
         assert_eq!(Solution::order_of_largest_plus_sign(5, vec![vec![4, 2]]), 2);
         assert_eq!(Solution::order_of_largest_plus_sign(1, vec![vec![0, 0]]), 0);
+        assert_eq!(
+            Solution::order_of_largest_plus_sign(2, vec![vec![0, 0], vec![1, 1]]),
+            1
+        );
     }
 }

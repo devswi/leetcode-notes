@@ -58,6 +58,7 @@ mod p0724_find_pivot_index;
 mod p0733_flood_fill;
 mod p0746_min_cost_climbing_stairs;
 mod p0754_reach_a_number;
+mod p0764_largest_plus_sign;
 mod p0769_max_chunks_to_make_sorted;
 mod p0777_swap_adjacent_in_lr_string;
 mod p0779_k_th_symbol_in_grammar;

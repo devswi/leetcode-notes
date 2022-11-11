@@ -94,6 +94,7 @@ mod p1678_goal_parser_interpretation;
 mod p1684_count_the_number_of_consistent_strings;
 mod p1694_reformat_phone_number;
 mod p1700_number_of_students_unable_to_eat_lunch;
+mod p1704_determine_if_string_halves_are_same;
 mod p1768_merge_string_alternately;
 mod p1773_count_items_matching_a_rule;
 mod p1784_check_if_binary_string_has_at_most_one_segment_of_ones;

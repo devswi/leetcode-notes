@@ -63,6 +63,7 @@ mod p0769_max_chunks_to_make_sorted;
 mod p0777_swap_adjacent_in_lr_string;
 mod p0779_k_th_symbol_in_grammar;
 mod p0784_letter_case_permutation;
+mod p0790_domino_and_tromino_tiling;
 mod p0801_minimum_swaps_to_make_sequences_increasing;
 mod p0811_subdomain_visit_count;
 mod p0816_ambiguous_coordinates;

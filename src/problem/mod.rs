@@ -66,6 +66,7 @@ mod p0784_letter_case_permutation;
 mod p0790_domino_and_tromino_tiling;
 mod p0791_custom_sort_string;
 mod p0801_minimum_swaps_to_make_sequences_increasing;
+mod p0805_split_array_with_same_average;
 mod p0811_subdomain_visit_count;
 mod p0816_ambiguous_coordinates;
 mod p0817_linked_list_components;

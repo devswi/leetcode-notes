@@ -66,6 +66,7 @@ mod p0779_k_th_symbol_in_grammar;
 mod p0784_letter_case_permutation;
 mod p0790_domino_and_tromino_tiling;
 mod p0791_custom_sort_string;
+mod p0792_nuumber_of_matching_subsequences;
 mod p0801_minimum_swaps_to_make_sequences_increasing;
 mod p0805_split_array_with_same_average;
 mod p0811_subdomain_visit_count;

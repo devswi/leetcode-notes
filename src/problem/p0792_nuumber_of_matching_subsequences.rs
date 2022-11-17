@@ -8,22 +8,29 @@ pub struct Solution {}
 impl Solution {
     pub fn num_matching_subseq(s: String, words: Vec<String>) -> i32 {
         let mut arr = vec![vec![]; 26];
-        for (idx, b) in s.bytes().into_iter().enumerate() {
+        s.bytes().into_iter().enumerate().for_each(|(idx, b)| {
             arr[(b - b'a') as usize].push(idx);
-        }
-        let mut res = words.len();
-        for w in words {
-            if w.len() > s.len() {
-                res -= 1;
-                continue;
+        });
+        words
+            .iter()
+            .filter(|&x| Solution::binary_search(x.as_bytes(), &arr))
+            .count() as i32
+    }
+
+    fn binary_search(x: &[u8], list: &[Vec<usize>]) -> bool {
+        let mut pos = 0;
+        for ch in x.iter().copied() {
+            let ch = (ch - b'a') as usize;
+            let loc = list[ch].binary_search(&pos).unwrap_or_else(|e| e);
+
+            if list[ch].len() <= loc {
+                return false;
             }
-            let mut p = -1;
-            for b in w.bytes() {
-                let idx = (b - b'a') as usize;
-                if arr[idx].len() == 0 || (arr[idx][arr[idx]] as i32) <= p {}
-            }
+
+            let idx = list[ch][loc];
+            pos = idx + 1;
         }
-        res as i32
+        true
     }
 }
 

@@ -22,6 +22,7 @@ mod p0113_path_sum_2;
 mod p0121_best_time_to_buy_and_sell_stock;
 mod p0144_binary_tree_preorder_traversal;
 mod p0145_binary_tree_postorder_traversal;
+mod p0179_largest_number;
 mod p0199_binary_tree_right_side_view;
 mod p0200_number_of_islands;
 mod p0203_remove_linked_list_elements;

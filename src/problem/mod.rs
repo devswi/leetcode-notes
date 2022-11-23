@@ -104,6 +104,7 @@ mod p1700_number_of_students_unable_to_eat_lunch;
 mod p1704_determine_if_string_halves_are_same;
 mod p1710_maximum_units_on_a_trunk;
 mod p1732_find_the_highest_altitude;
+mod p1742_maximum_number_of_balls_in_a_box;
 mod p1768_merge_string_alternately;
 mod p1773_count_items_matching_a_rule;
 mod p1784_check_if_binary_string_has_at_most_one_segment_of_ones;
